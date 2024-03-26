@@ -57,6 +57,7 @@ int maximo(int mat[][3]){
     return max;
 }
 
+
 void sumaFila2(int mat[][3]){
     int i, j, sum;
 
