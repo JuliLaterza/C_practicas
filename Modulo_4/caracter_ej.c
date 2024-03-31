@@ -9,13 +9,13 @@ int main() {
     c = getchar();
     while(c != '.'){
         
-        if (c == ' ' || c == '.'){
+        if (c == ' ' || c == '.'){  //Codigo fundamental para hacer la separacion de palabras.
             if(long_palabra > 3){
                 cant++;
             }
             long_palabra = 0;
         }else{
-            long_palabra++;
+            long_palabra++; //aumenta el incremento de la long, porque no es igual a espacio.
         }
         
         c = getchar();
