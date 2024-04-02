@@ -61,8 +61,6 @@ int main() {
             palabrasAN++;
         }
 
-
-        // Reiniciar contadores
         sum_long = 0;
         a = 0;
         e = 0;
@@ -76,10 +74,16 @@ int main() {
         }
         
     }
-    promedio = acum_long/palabrasAN;
+    
+    
     printf("\nLa cantidad de palabras que tiene todas las vocales y su longitud es par son: %d", cantPalabras);
-    printf("\nAcumulador de longitudes %d", acum_long);
-    printf("\nPalabras que cumplen la condicion %d", palabrasAN);
-    printf("\nEl promedio es: %.2f", promedio);
+    if(palabrasAN > 0){
+        promedio = acum_long/palabrasAN;
+        printf("\nAcumulador de longitudes %d", acum_long);
+        printf("\nPalabras que cumplen la condicion %d", palabrasAN);
+        printf("\nEl promedio es: %.2f", promedio);
+    }else{
+        printf("\nNo hay palabras que empiecen con N y terminen con Z.");
+    }
     return 0;
 }

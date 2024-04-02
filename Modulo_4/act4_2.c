@@ -15,35 +15,53 @@ int main() {
     sum_long = 0;
     palabrasAN = 0;
     printf("Ingresar una frase: ");
-    
+
     c = getchar();
 
     while (c != '\n') {
         prim = c;
         ultLetra = c;
-        putchar(prim);
-        printf("\n");
+
         while (c != ' ' && c != '\n') {
-            printf("\n");
-            putchar(c);
+        
             ultLetra = c;
             sum_long++;
+
+
+            if (c == 'a' || c == 'A') {
+                a++;
+            } else if (c == 'e' || c == 'E') {
+                e++;
+            } else if (c == 'i' || c == 'I') {
+                i++;
+            } else if (c == 'o' || c == 'O') {
+                o++;
+            } else if (c == 'u' || c == 'U') {
+                u++;
+            }
+            contLetras++;
             c = getchar();
         }
-        cantPalabras++;
-        printf("\nLongitud de la palabra: %d", sum_long);
+
+        if (a > 0 && e > 0 && i > 0 && o > 0 && u > 0) {
+            todasVocales = 1;
+        } else {
+            todasVocales = 0;
+        }
+
+        if (todasVocales == 1) {
+            if (contLetras % 2 == 0) {
+                cantPalabras++;
+            }
+        }
+
+
         if((prim == 'A' || prim == 'a') && (ultLetra =='n' || ultLetra == 'N' )){
             acum_long = acum_long + sum_long;
             palabrasAN++;
-        }else{
-            printf("\nNo cumple.");
         }
-        
-        
-        
-        
-        
-        
+
+
         // Reiniciar contadores
         sum_long = 0;
         a = 0;
@@ -51,7 +69,6 @@ int main() {
         i = 0;
         o = 0;
         u = 0;
-        
         contLetras = 0;
         
         if (c != '\n') {
@@ -60,10 +77,8 @@ int main() {
         
     }
     promedio = acum_long/palabrasAN;
-    printf("\nCantidad de palabras %d", cantPalabras);
-    printf("\nAcumulador de longitudes %d", acum_long);
+    printf("\nLa cantidad de palabras que tiene todas las vocales y su longitud es par son: %d", cantPalabras);
     printf("\nPalabras que cumplen la condicion %d", palabrasAN);
     printf("\nEl promedio es: %.2f", promedio);
-    //printf("\nLa cantidad de palabras que tiene todas las vocales y su longitud es par son: %d", cantPalabras);
     return 0;
 }
