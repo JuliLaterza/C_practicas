@@ -31,7 +31,7 @@ void cargarLista(nodo *empleado){
         scanf("%d", &nuevoNodo->antiguedad);
         printf("Ingrese el sueldo: ");
         scanf("%f", &nuevoNodo->sueldo);
-        nuevoNodo->sig = (nodo*)malloc(sizeof(nodo));
+        nuevoNodo->sig = (nodo*)malloc(sizeof(nodo)); 
         cargarLista(nuevoNodo->sig);
     }
 }
