@@ -42,7 +42,7 @@ void calc_producto(nodo* p) {
     }
 
     if (count < 5) {
-        printf("No hay suficientes numeros en la pila.\n");
+        printf("No hay suficientes numeros en la pila\n");
     } else {
         printf("El producto de los numeros es: %d\n", producto);
     }
