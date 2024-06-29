@@ -39,7 +39,7 @@ int main()
     prin=insertar1(prin);
     printf("la lista nueva es");
 
-    mostrar(prin);
+    mostrar(prin);  
     prin=eliminar1(prin);
     eliminar2(prin);
     printf("la lista nueva es");
@@ -109,27 +109,26 @@ nodo* insertar1(nodo *p)
 {
     nodo *aux;
 
-        aux=(nodo *)malloc(sizeof(nodo));
-        aux->num1=(p->num1/2);
-        aux->num2=(p->num2/2);
-        aux->num3=(p->num3/2);
-        aux->sig=p;
-        p=aux;
+    aux=(nodo *)malloc(sizeof(nodo));
+    aux->num1=(p->num1/2);
+    aux->num2=(p->num2/2);
+    aux->num3=(p->num3/2);
+    aux->sig=p;
+    p=aux;
 
     return p;
 }
 
 void insertar2 (nodo *p)
 {nodo *aux;
-    while(p->sig!=NULL && p->sig->sig!=NULL)
-    {
+    while(p->sig!=NULL && p->sig->sig!=NULL){
 
-            aux=(nodo *)malloc(sizeof(nodo));
-            aux->num1=(p->sig->num1/2);
-            aux->num2=(p->sig->num2/2);
-            aux->num3=(p->sig->num3/2);
-            aux->sig=p->sig;
-            p->sig=aux;
+        aux=(nodo *)malloc(sizeof(nodo));
+        aux->num1=(p->sig->num1/2);
+        aux->num2=(p->sig->num2/2);
+        aux->num3=(p->sig->num3/2);
+        aux->sig=p->sig;
+        p->sig=aux;
 
 
         p=p->sig->sig;

@@ -113,8 +113,8 @@ void insertar (nodo *registro) {
             
             aux=(nodo *)malloc(sizeof(nodo));
             
-            //aux->num1=(h->num1)/2;
-            //aux->num2=(h->num2)/2;
+            aux->num1=(h->num1)/2;
+            aux->num2=(h->num2)/2;
             aux->sig=registro->sig;
             registro->sig=aux;
             registro = registro->sig->sig;
